@@ -1,0 +1,49 @@
+{
+  "name": "uptime",
+  "version": "1.0.0",
+  "description": "Uptimes Service",
+  "author": {
+    "name": "Mark Massoud",
+    "email": "markmssd@gmail.com"
+  },
+  "main": "src/index.js",
+  "private": true,
+  "license": "ISC",
+  "engines": {
+    "node": "~6.10.2"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "body-parser": "1.17.2",
+    "config": "1.26.1",
+    "cors": "2.8.4",
+    "express": "4.15.3",
+    "handlebars": "4.0.10",
+    "moment": "2.18.1",
+    "mongodb": "2.2.31",
+    "serve-favicon": "2.4.3",
+    "swagger-express-middleware": "1.0.0-alpha.12",
+    "yamljs": "0.3.0"
+  },
+  "devDependencies": {
+    "chai": "4.1.0",
+    "chai-as-promised": "7.1.1",
+    "dirty-chai": "2.0.1",
+    "eslint": "4.3.0",
+    "eslint-plugin-import": "2.7.0",
+    "jsdoc": "3.5.3",
+    "mocha": "3.4.2",
+    "nyc": "11.0.3",
+    "proxyquire": "1.8.0",
+    "sinon": "2.3.8",
+    "sinon-chai": "2.12.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "NODE_ENV=test npm run lint && npm run coverage",
+    "test:unit": "NODE_ENV=test mocha",
+    "coverage": "NODE_ENV=test nyc --reporter=text --reporter=lcov mocha",
+    "lint": "eslint src test",
+    "doc": "jsdoc src/**/*.js --destination ./.jsdoc"
+  }
+}
